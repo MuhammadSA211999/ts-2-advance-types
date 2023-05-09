@@ -36,3 +36,26 @@ const user4: UserIn2 = {
     age: 24
 }
 const genFunTupleRes2 = genFunTuple<UserIn, UserIn2>(user3, user4)
+const genFunTupleRes3 = genFunTuple<UserIn, Array<string>>(user3, ['NAMIK', 'CAMIK'])
+
+//Generic Spreading 
+const myCrush: string = 'Gulbahar'
+interface Me {
+    name: string;
+    age: number;
+    salary: string
+}
+
+const me: Me = {
+    name: 'MSA',
+    age: 24,
+    salary: 'unknown'
+}
+
+const addMeWithCrush = <T>(me: T): T => {
+    const crush = 'Gulbahar'
+    const couple = { ...me, crush }
+    return couple
+}
+
+const coupleRes = addMeWithCrush(me)
