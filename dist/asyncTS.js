@@ -31,7 +31,7 @@ const makePromiseObject = () => {
             resolve(user);
         }
         else {
-            reject('Cant find user');
+            reject("Cant find user");
         }
     });
 };

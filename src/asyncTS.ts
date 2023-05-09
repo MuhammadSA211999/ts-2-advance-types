@@ -25,7 +25,7 @@ const makePromiseObject = (): Promise<UserIn> => {
             resolve(user)
         }
         else {
-            reject('Cant find user')
+            reject("Cant find user")
         }
     })
 }
