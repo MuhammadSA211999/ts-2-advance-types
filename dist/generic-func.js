@@ -1,38 +1,53 @@
 "use strict";
-const createArray = (param) => {
-    return [param];
-};
-const result1 = createArray('BD');
-const createArray1 = (param) => [param];
-const result2 = createArray1(3);
-const genericFunc1 = (param) => {
-    return [param];
-};
-const genRes1 = genericFunc1('BD');
-const user3 = {
-    name: 'MSA',
-    age: 24
-};
-const genRes2 = genericFunc1(user3);
-const genFunTuple = (par1, par2) => [par1, par2];
-const genFunTupleRes1 = genFunTuple({ name: 'MSA' }, 'Gulbahar');
-const user4 = {
-    role: 'hus',
-    name: 'MSA',
-    age: 24
-};
-const genFunTupleRes2 = genFunTuple(user3, user4);
-const genFunTupleRes3 = genFunTuple(user3, ['NAMIK', 'CAMIK']);
-//Generic Spreading 
-const myCrush = 'Gulbahar';
-const me = {
-    name: 'MSA',
-    age: 24,
-    salary: 'unknown'
-};
-const addMeWithCrush = (me) => {
-    const crush = 'Gulbahar';
-    const couple = Object.assign(Object.assign({}, me), { crush });
-    return couple;
-};
-const coupleRes = addMeWithCrush(me);
+// const createArray = (param: string) => {
+//     return [param]
+// }
+// const result1 = createArray('BD')
+// const createArray1 = (param: number): number[] => [param]
+// const result2 = createArray1(3)
+// const genericFunc1 = <T>(param: T): T[] => {
+//     return [param]
+// }
+// const genRes1 = genericFunc1<string>('BD')
+// interface UserIn {
+//     name: string;
+//     age: number
+// }
+// const user3: UserIn = {
+//     name: 'MSA',
+//     age: 24
+// }
+// const genRes2 = genericFunc1<UserIn>(user3)
+// const genFunTuple = <X, Y>(par1: X, par2: Y): [X, Y] => [par1, par2]
+// const genFunTupleRes1 = genFunTuple<{ name: string }, string>({ name: 'MSA' }, 'Gulbahar')
+// interface UserIn2 {
+//     role: string;
+//     name: string;
+//     age: number
+// }
+// const user4: UserIn2 = {
+//     role: 'hus',
+//     name: 'MSA',
+//     age: 24
+// }
+// const genFunTupleRes2 = genFunTuple<UserIn, UserIn2>(user3, user4)
+// const genFunTupleRes3 = genFunTuple<UserIn, Array<string>>(user3, ['NAMIK', 'CAMIK'])
+// //Generic Spreading
+// const myCrush: string = 'Gulbahar'
+// interface Me1 {
+//     name: string;
+//     age: number;
+//     salary: string
+// }
+// const me: Me = {
+//     name: 'MSA',
+//     age: 24,
+//     salary: 'unknown'
+// }
+// const addMeWithCrush = <T>(me: T) => {
+//     const crush = 'Gulbahar'
+//     const couple = { ...me, crush }
+//     return couple
+// }
+// const coupleRes = addMeWithCrush(me)
+// const age = coupleRes.age
